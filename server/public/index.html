@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HealthScore App</title>
+  <!-- Angular is always first -->
+  <script src="vendors/angular/angular.js"></script>
+  <script src="vendors/angular-route/angular-route.js"></script>
+
+  <!-- Client.js -->
+  <script src="scripts/client.js"></script>
+
+  <!-- Services Order here doesn't matter, just group em -->
+  <script src="scripts/services/user.service.js"></script>
+
+  <!-- Controllers Order here doesn't matter, just group em -->
+  <script src="scripts/controllers/user.controller.js"></script>
+  <script src="scripts/controllers/score.controller.js"></script>
+
+</head>
+<body ng-app="myApp" ng-controller="UserController as cc":>
+  <header ng-if="cc.header"><h1>mHS is Cool!</h1></header>
+  <nav>
+    <a href="/#!user" ng-click="cc.header = true">Users</a>
+    <a href="/#!score" ng-click="cc.header = false">Scores</a>
+  </nav>
+  <main ng-view>
+    <!-- View content would go here -->
+  </main>
+</body>
+</html>

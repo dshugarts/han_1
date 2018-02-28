@@ -1,0 +1,24 @@
+
+<h2>All Users</h2>
+
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Systolic</th>
+    <th>Diastolic</th>
+    <th>Glucose</th>
+    <th>LDL</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="user in cc.users.list">
+      <td>{{ user.name }}</td>
+      <td>{{ user.age }}</td>
+      <td>{{ user.score.systolic }}</td>
+      <td>{{ user.score.diastolic }}</td>
+      <td>{{ user.score.glucose }}</td>
+      <td>{{ user.score.ldl }}</td>
+    </tr>
+  </tbody>
+
+</table>
